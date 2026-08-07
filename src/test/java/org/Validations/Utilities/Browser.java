@@ -1,6 +1,7 @@
 package org.Validations.Utilities;
 
 import org.Validations.PageObjects.Cart_Page_Objects;
+import org.Validations.PageObjects.Checkout_Info_Objects;
 import org.Validations.PageObjects.Home_Page_Objects;
 import org.Validations.PageObjects.Login_Page_Objects;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +33,9 @@ public class Browser {
         //Enables only when you are using for the Cart_Info_Page_Validations
         Cart_Page_Objects Cart = new Cart_Page_Objects();
         Cart.AddedProducts();
+        //Enables only when you are using for the Cart_Info_Page_Validations
+        Checkout_Info_Objects Checkout = new Checkout_Info_Objects();
+        Checkout.PageInfo();
     }
 
     @AfterMethod
