@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Sauce_Demo(failed)">
+    <classes>
+      <class name="org.Validations.Validations.Home_Page_Validations">
+        <methods>
+          <include name="Bag_Name_Validation"/>
+          <include name="Add_To_Cart_Text_Validation"/>
+          <include name="Launch"/>
+          <include name="Remove_Button_validation"/>
+          <include name="Filter_Icon_Validation"/>
+          <include name="Teardown"/>
+          <include name="Add_To_Cart_Validation"/>
+          <include name="Dropdown_Validation"/>
+        </methods>
+      </class> <!-- org.Validations.Validations.Home_Page_Validations -->
+    </classes>
+  </test> <!-- Sauce_Demo(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
