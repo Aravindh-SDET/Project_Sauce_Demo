@@ -10,12 +10,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.time.Duration;
+
 public class Browser {
-    public static WebDriver Driver;
+    public WebDriver Driver;
 
     @BeforeMethod
     public void Launch(){
-    System.setProperty("webdriver.edge.driver","C:\\Browser Drivers\\msedgedriver.exe");
+    //System.setProperty("webdriver.edge.driver","C:\\Browser Drivers\\msedgedriver.exe");
         Driver = new EdgeDriver();
         Driver.get("https://www.saucedemo.com/");
         Driver.manage().window().maximize();
@@ -24,18 +26,6 @@ public class Browser {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        //Enables only when you are using for the Home_Page_Validations
-        Login_Page_Objects LOP = new Login_Page_Objects();
-        LOP.Login();
-        //Enables only when you are using for the Cart_Page_Validations
-        Home_Page_Objects Home = new Home_Page_Objects();
-        Home.Addtocart();
-        //Enables only when you are using for the Cart_Info_Page_Validations
-        Cart_Page_Objects Cart = new Cart_Page_Objects();
-        Cart.AddedProducts();
-        //Enables only when you are using for the Cart_Info_Page_Validations
-        Checkout_Info_Objects Checkout = new Checkout_Info_Objects();
-        Checkout.PageInfo();
     }
 
     @AfterMethod

@@ -3,15 +3,21 @@ package org.Validations.PageObjects;
 import org.Validations.Utilities.Browser;
 import org.Validations.Validations.Loginpage_Validations;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.sql.Driver;
 import java.util.List;
 
-public class Home_Page_Objects extends Browser {
+public class Home_Page_Objects{
+    WebDriver Driver;
 
-    public Home_Page_Objects(){
+    public Home_Page_Objects(WebDriver Driver){
+        Login_Page_Objects L = new Login_Page_Objects(Driver);
+        L.Login();
+        this.Driver = Driver;
         PageFactory.initElements(Driver,this);
     }
 

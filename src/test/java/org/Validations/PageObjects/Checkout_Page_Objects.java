@@ -1,14 +1,19 @@
 package org.Validations.PageObjects;
 
 import org.Validations.Utilities.Browser;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Checkout_Page_Objects extends Browser {
-    public Checkout_Page_Objects(){
+public class Checkout_Page_Objects{
+    WebDriver Driver;
+    public Checkout_Page_Objects(WebDriver Driver){
+        Checkout_Info_Objects C = new Checkout_Info_Objects(Driver);
+        C.PageInfo();
+        this.Driver = Driver;
         PageFactory.initElements(Driver,this);
     }
 

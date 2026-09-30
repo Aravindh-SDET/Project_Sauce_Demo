@@ -1,14 +1,19 @@
 package org.Validations.PageObjects;
 
 import org.Validations.Utilities.Browser;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login_Page_Objects extends Browser {
 
-    public Login_Page_Objects() {
-        PageFactory.initElements(Driver, this);
+public class Login_Page_Objects{
+    public WebDriver Driver;
+    public Login_Page_Objects(WebDriver Driver) {
+        this.Driver=Driver;
+    PageFactory.initElements(Driver,this);
+        PageFactory.initElements(Driver,this);
     }
 
     @FindBy(xpath = "//div[@class='login_logo']")

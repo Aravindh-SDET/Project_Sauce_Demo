@@ -5,14 +5,17 @@
     <classes>
       <class name="org.Validations.Validations.Home_Page_Validations">
         <methods>
-          <include name="Bag_Name_Validation"/>
           <include name="Add_To_Cart_Text_Validation"/>
+          <include name="Bag_Name_Validation"/>
           <include name="Launch"/>
           <include name="Remove_Button_validation"/>
+          <include name="Heading_Validation"/>
           <include name="Filter_Icon_Validation"/>
+          <include name="Menu_Icon_Validation"/>
           <include name="Teardown"/>
           <include name="Add_To_Cart_Validation"/>
           <include name="Dropdown_Validation"/>
+          <include name="Cart_Icon_Validation"/>
         </methods>
       </class> <!-- org.Validations.Validations.Home_Page_Validations -->
     </classes>

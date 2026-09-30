@@ -1,15 +1,20 @@
 package org.Validations.PageObjects;
 
 import org.Validations.Utilities.Browser;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Cart_Page_Objects extends Browser {
+public class Cart_Page_Objects{
+    WebDriver Driver;
 
-    public Cart_Page_Objects(){
+    public Cart_Page_Objects(WebDriver Driver){
+        Home_Page_Objects H = new Home_Page_Objects(Driver);
+        H.Addtocart();
+        this.Driver = Driver;
         PageFactory.initElements(Driver, this);
     }
 

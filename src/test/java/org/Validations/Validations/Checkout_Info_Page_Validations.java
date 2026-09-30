@@ -8,37 +8,37 @@ public class Checkout_Info_Page_Validations extends Browser {
 
     @Test
     public void CheckoutPageTittleValidations(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         String Tittle = Info.GetCheckoutPageTittle().getText();
         System.out.println(Tittle);
     }
     @Test
     public void CartIconUpdate_Validations(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         String Cart_Items = Info.GetCartIconUpdate().getText();
         System.out.println(Cart_Items);
     }
     @Test
     public void FirstNameFieldValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         String FirstName = Info.GetFirstName().getAttribute("placeholder");
         System.out.println(FirstName);
     }
     @Test
     public void LastNameFieldValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         String LastName = Info.GetLastName().getAttribute("placeholder");
         System.out.println(LastName);
     }
     @Test
     public void ZipcodeFieldValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         String LastName = Info.GetZipcode().getAttribute("placeholder");
         System.out.println(LastName);
     }
     @Test
     public void FirstNameErrorFieldandcolorValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         Info.GetLastName().sendKeys("Kingston");
         Info.GetZipcode().sendKeys("456789");
         Info.GetContinueButton().click();
@@ -49,7 +49,7 @@ public class Checkout_Info_Page_Validations extends Browser {
     }
     @Test
     public void LastNameErrorFieldandcolorValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         Info.GetFirstName().sendKeys("David");
         Info.GetZipcode().sendKeys("456789");
         Info.GetContinueButton().click();
@@ -60,7 +60,7 @@ public class Checkout_Info_Page_Validations extends Browser {
     }
     @Test
     public void ZipcodeErrorFieldandcolorValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         Info.GetFirstName().sendKeys("David");
         Info.GetLastName().sendKeys("Kingston");
         Info.GetContinueButton().click();
@@ -71,22 +71,22 @@ public class Checkout_Info_Page_Validations extends Browser {
     }
     @Test
     public void ContinueButtonTextValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         System.out.println(Info.GetContinueButton().getText());
     }
     @Test
     public void ContinueButtonColorValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         System.out.println(Info.GetContinueButton().getCssValue("background-color"));
     }
     @Test
     public void CancelButtonTextValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         System.out.println(Info.GetCancelButton().getText());
     }
     @Test
     public void CancelButtonColorValidation(){
-        Checkout_Info_Objects Info = new Checkout_Info_Objects();
+        Checkout_Info_Objects Info = new Checkout_Info_Objects(Driver);
         System.out.println(Info.GetCancelButton().getCssValue("background-color"));
     }
 

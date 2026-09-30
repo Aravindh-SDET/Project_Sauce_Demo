@@ -13,37 +13,37 @@ public class Home_Page_Validations extends Browser {
 
     @Test
     public void Heading_Validation(){
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         String Heading = Home.GetHeading().getText();
         System.out.println(Heading);
     }
     @Test
     public void Filter_Icon_Validation(){
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         Boolean Filter_Icon = Home.GetFilterIcon().isDisplayed();
         System.out.println(Filter_Icon);
     }
     @Test
     public void Cart_Icon_Validation(){
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         Boolean Cart_Icon =Home.GetCartIcon().isDisplayed();
         System.out.println(Cart_Icon);
     }
     @Test
     public void Menu_Icon_Validation(){
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         Boolean Menu_Icon =Home.GetMenu_icon().isDisplayed();
         System.out.println(Menu_Icon);
     }
     @Test
     public void Bag_Name_Validation(){
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         String Bag_Name = Home.GetBagName().getText();
         System.out.println(Bag_Name);
     }
     @Test
     public void Dropdown_Validation(){
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         System.out.println("Before Selection : "+Home.GetVisibleOption().getText());
         Select Option = new Select(Home.GetDropdown());
         Option.selectByVisibleText("Price (low to high)");
@@ -51,13 +51,13 @@ public class Home_Page_Validations extends Browser {
     }
     @Test
     public void Add_To_Cart_Text_Validation(){
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         String AddToCart_Button_Name = Home.GetBagAddtocartButton().getText();
         System.out.println(AddToCart_Button_Name);
     }
     @Test
     public void Add_To_Cart_Validation() {
-        Home_Page_Objects Home = new Home_Page_Objects();
+        Home_Page_Objects Home = new Home_Page_Objects(Driver);
         try {
             //It will populate No Such Element because it will not have the Cardupdate value untill we add to cart
             String Cart_Icon = Home.GetCartUpdate().getText();
@@ -73,7 +73,7 @@ public class Home_Page_Validations extends Browser {
         @Test
         public void Remove_Button_validation(){
             Add_To_Cart_Validation();
-            Home_Page_Objects Home = new Home_Page_Objects();
+            Home_Page_Objects Home = new Home_Page_Objects(Driver);
             String Remove_Button_Text = Home.GetRemoveButton().getText();
             System.out.println(Remove_Button_Text);
             String Remove_Button_Colour = Home.GetRemoveButton().getCssValue("color");
